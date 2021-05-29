@@ -1,0 +1,37 @@
+{
+    "name": "ycl123/queue-think",
+    "description": "基于 ThinkPHP6 和 Workerman4 的定时任务队列。",
+    "type": "library",
+    "keywords": [
+        "queue",
+        "scheduler",
+        "scheduling"
+    ],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "ycl123",
+            "email": "y1834257499@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "topthink/framework": "^6.0",
+        "ycl123/queue": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ycl123\\queue\\": "src"
+        }
+    },
+    "extra": {
+        "think": {
+            "services": [
+                "ycl123\\queue\\Service"
+            ],
+            "config":{
+                "ycl123_queue": "../queue/src/config.php"
+            }
+        }
+    }
+}
